@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bingzhen Li's notes, projects, and small discoveries.">
+  <title>Bingzhen Li — Notes & Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Bingzhen Li home">BL<span>·</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#posts">Writing</a>
+      <a href="#about">About</a>
+      <button class="search-button" id="open-search" aria-haspopup="dialog">Search <kbd>⌘ K</kbd></button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">A personal corner of the internet</p>
+      <h1 id="page-title">Bingzhen<br><em>Li</em></h1>
+      <p class="intro">Notes on building, learning, music, and the tiny moments worth keeping.</p>
+      <a class="scroll-link" href="#posts">Explore the journal <span>↓</span></a>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-title">
+      <p class="section-label">Featured note · 01</p>
+      <article class="feature-card" data-search="first post starting a personal site ideas curiosity projects">
+        <div>
+          <p class="post-meta">SEPTEMBER 24, 2026 · 3 MIN READ</p>
+          <h2 id="featured-title">Why I’m starting this page</h2>
+          <p>Projects move quickly. This is a place to slow down, collect the good parts, and share what I learn along the way.</p>
+          <button class="text-link read-post" data-post="starting">Read the post <span>→</span></button>
+        </div>
+        <div class="feature-mark" aria-hidden="true">✦</div>
+      </article>
+    </section>
+
+    <section class="posts" id="posts" aria-labelledby="posts-title">
+      <div class="section-heading"><p class="section-label">Recent writing</p><h2 id="posts-title">From the journal</h2></div>
+      <div class="post-list" id="post-list">
+        <article class="post-row" data-search="starting personal site ideas curiosity projects welcome">
+          <p class="post-meta">SEP 24 · NOTE</p><h3>Why I’m starting this page</h3><p>A small home for big ideas, works in progress, and things I want to remember.</p><button class="arrow read-post" data-post="starting" aria-label="Read Why I’m starting this page">↗</button>
+        </article>
+        <article class="post-row" data-search="robotics building code engineering ftc coming soon">
+          <p class="post-meta">COMING SOON · PROJECTS</p><h3>What I’m building</h3><p>Robots, experiments, and the ideas behind them.</p><span class="arrow muted">↗</span>
+        </article>
+        <article class="post-row" data-search="music violin practice favorites playlist coming soon">
+          <p class="post-meta">COMING SOON · MUSIC</p><h3>Sounds I’m keeping</h3><p>Practice notes, favorite pieces, and a growing playlist.</p><span class="arrow muted">↗</span>
+        </article>
+      </div>
+      <p class="no-results" id="no-results" hidden>No notes match that search yet.</p>
+    </section>
+
+    <section class="about" id="about"><p class="section-label">About</p><p>I’m <strong>Bingzhen Li</strong>. I like making things, asking good questions, and turning new ideas into the next experiment.</p><a href="mailto:hello@example.com" class="text-link">Say hello <span>↗</span></a></section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Bingzhen Li</span><span>Made with curiosity ✦</span></footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <form method="dialog" class="search-panel">
+      <div class="search-top"><label id="search-title" for="search-input">Search the journal</label><button class="close-search" value="cancel" aria-label="Close search">×</button></div>
+      <input id="search-input" type="search" placeholder="Try “robotics” or “music”" autocomplete="off">
+      <p class="search-help">Type to filter posts · <kbd>Esc</kbd> to close</p>
+    </form>
+  </dialog>
+
+  <dialog id="post-dialog" aria-labelledby="post-title">
+    <article class="post-panel"><button class="close-post" aria-label="Close post">×</button><p class="post-meta">SEPTEMBER 24, 2026 · 3 MIN READ</p><h2 id="post-title">Why I’m starting this page</h2><div class="post-body"><p>Every project starts as a small question: <em>what if I tried this?</em> I wanted one place to keep those questions—and the answers I find while chasing them.</p><p>This page is my notebook in public. I’ll use it to share things I’m building, music I’m practicing, and little discoveries that might be useful to someone else someday.</p><p>For now, this is the first note. The next one is already on its way.</p></div><p class="signature">— Bingzhen</p></article>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
