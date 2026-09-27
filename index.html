@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A browser-based workbench for calculations, text, developer tools, images, PDFs, and network lookups."
+    />
+    <title>Utility Workbench</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232d53e5'/%3E%3Cpath d='M10 11v13q0 8 10 8t10-8V11h-6v13q0 3-4 3t-4-3V11' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="vendor/js-yaml.min.js" defer></script>
+    <script src="vendor/md5.min.js" defer></script>
+    <script src="vendor/pdf-lib.min.js" defer></script>
+    <script src="vendor/qrcode.js" defer></script>
+    <script src="vendor/pako.min.js" defer></script>
+    <script src="vendor/UPNG.js" defer></script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to tool</a>
+    <aside class="sidebar">
+      <a class="brand" href="#calculator"
+        ><span class="brand-icon">U</span
+        ><span>UTILITY<br /><small>WORKBENCH</small></span></a
+      >
+      <div class="nav-title">YOUR EVERYDAY TOOLKIT</div>
+      <nav id="navigation" aria-label="Utilities"></nav>
+      <div class="side-note">
+        Files stay on your device.<br />Network tools contact public services.
+      </div>
+    </aside>
+    <div class="shell">
+      <header>
+        <span class="breadcrumb"
+          >Workbench <span>/</span>
+          <b id="crumb">Scientific calculator</b></span
+        ><button
+          id="theme"
+          class="theme"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          ◐ <span>Dark mode</span>
+        </button>
+      </header>
+      <main id="workspace" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow" id="category">EVERYDAY</p>
+            <h1 id="title">Scientific calculator</h1>
+            <p id="description"></p>
+          </div>
+          <span id="privacy" class="badge">On your device</span>
+        </div>
+        <div id="tools"></div>
+      </main>
+      <footer>
+        Utility Workbench <span>·</span> Small tools. Useful results.
+      </footer>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <noscript>This website needs JavaScript to run its tools.</noscript>
+  </body>
+</html>
